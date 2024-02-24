@@ -402,7 +402,7 @@ ul {
 }
 
 
-@media (width<768px) {
+@media (width<868px) {
     .opening {
         min-width: 100%;
         background-size: cover;
@@ -568,4 +568,58 @@ ul {
     .footer-container .socials li:not(:last-child) {
         margin-right: 25px;
     }
+}
+
+@media (min-width:868px) and (max-width:1420px) {
+    .opening{
+    background-position: initial;
+    }
+    .opening p{
+    margin: 0 170px;
+    }
+    .card img {
+        max-width: 250px;
+    }
+    .card {
+        width: 250px;
+    }
+    .text-container p {
+        margin: 8px 24px;
+    }
+    .quote-container h3 {
+        padding: 100px 100px;
+    }
+    .places-container {
+        margin: 96px 24px;
+    }
+
+    .places-card1 p {
+        width: 315px;
+    }
+    .places-card1 img, .places-card img {
+        width: 495px;
+        aspect-ratio: 1/1;
+    }
+.places-card {
+    width: 100%;
+}
+
+.places-card p, .places-card ul {
+    font-size: 16px;
+}
+.places-card:last-child img {
+    margin: 40px 0 0 0;
+}
+.testimonials h2 {
+    text-align: center;
+}
+.testimonial-card {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.testimonials {
+    margin: 96px 167px 96px 167px;
+}
+
 }
