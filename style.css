@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #0C1919;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header img {
+    margin: 6px 0 6px 15px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links ul li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+    }
+}
+
+
+ul {
+    margin: 0;
+}
+
+.nav-links li {
+    color: white;
+    display: inline;
+    float: right;
+    font-size: 16px;
+    list-style: none;
+    padding-right: 6px;
+}
+
+
+.nav-links li a {
+    padding: 6px 18px 6px 18px;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Work Sans", sans-serif;
+}
+
+.nav-links ul li a:active,
+.nav-links ul li a.active,
+.nav-links ul li a:hover {
+    background-color: #88AAAA;
+    border-radius: 8px;
+}
+
+.opening {
+    background-image: url("/images/portada.jpg");
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+    min-height: 67%;
+    min-width: 700px;
+    background-position: center;
+    background-size: 140%;
+}
+
+.opening h1 {
+    font-family: "Indie Flower", cursive;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 55px;
+    font-weight: 100;
+    margin: 58px 0 0 167px;
+}
+
+.opening p {
+    font-family: "Work Sans", sans-serif;
+    color: #fff;
+    margin-left: 318px;
+    margin: 0 623px 0 167px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+}
+
+.cards-container {
+    display: flex;
+    margin-top: 354px;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+
+}
+
+.card img {
+    max-width: 326px;
+    border-radius: 10px;
+    box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
+}
+
+.card {
+    width: 326px;
+    background-color: #fff;
+    padding: 25px 20px;
+}
+
+.card:first-child {
+    border-radius: 20px 0;
+    padding: 25px 0 25px 25px;
+}
+
+.card:nth-child(3) {
+    border-radius: 0 20px;
+    padding: 25px 25px 25px 0;
+}
+
+.card h3 {
+    font-family: "Indie Flower", cursive;
+    color: #4E7777;
+    font-size: 35px;
+    margin: 25px 0 0 0;
+    font-weight: 400;
+}
+
+.card p {
+    font-family: "Work Sans", sans-serif;
+    color: #0C1919;
+    margin-top: 0;
+    line-height: 22px;
+}
+
+.card a,
+.places-card1 a,
+.places-card a {
+    background-color: #4E7777;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Work Sans", sans-serif;
+    padding: 7px 15px;
+    border-radius: 7px;
+    box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
+}
+
+.text-container {
+    margin: 70px 0 50px 0;
+}
+
+.text-container h2 {
+    text-align: center;
+    font-family: "Indie Flower", cursive;
+    color: #E1A142;
+    letter-spacing: 1px;
+    font-size: 55px;
+    font-weight: 100;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.text-container p {
+    font-family: "Work Sans", sans-serif;
+    color: #0C1919;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 330px 40px 330px;
+}
+
+.quote-container {
+    background-image: url("/images/fondo-ola.jpg");
+    background-repeat: no-repeat;
+    min-height: 70%;
+    min-width: 700px;
+    background-position: center;
+    background-position: 50% 41%;
+    height: 436px;
+    background-size: 140%;
+}
+
+.quote-container h3 {
+    text-align: left;
+    font-family: "Indie Flower", cursive;
+    font-size: 32px;
+    color: #fff;
+    font-weight: 100;
+    line-height: 40px;
+    padding: 115px 371px;
+
+}
+
+.places-container {
+    margin: 80px 4% 80px 167px;
+}
+
+.places-container h2,
+.testimonials h2 {
+    font-family: "Indie Flower", cursive;
+    color: #E1A142;
+    letter-spacing: 1px;
+    font-size: 55px;
+    font-weight: 100;
+    margin: 0 0 8px 0;
+}
+
+.places-card1 {
+    display: flex;
+    width: 100%;
+}
+
+.places-card1 img {
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
+    flex: 1;
+}
+
+.places-card1 .text {
+    padding: 50px 20px;
+    width: 50%;
+}
+
+.places-card1 h3,
+.places-card h3 {
+    font-family: "Indie Flower", cursive;
+    color: #4E7777;
+    font-size: 35px;
+    margin: 34px 0 0 0;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.places-card1 p {
+    font-family: "Work Sans", sans-serif;
+    color: #0C1919;
+    line-height: 22px;
+    width: 407px;
+}
+
+.places-card p {
+    font-family: "Work Sans", sans-serif;
+    color: #0C1919;
+    line-height: 20px;
+    width: 407px;
+    font-size: 14px;
+}
+
+.places-card img {
+    width: 240px;
+    border-radius: 10px;
+    box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
+    margin: 40px 0 0 0;
+}
+
+.places-card:last-child img {
+    margin: 40px 0 0 20px;
+}
+
+.places-card {
+    display: flex;
+    width: 44%;
+    float: left;
+}
+
+.places-card .text {
+    padding: 50px 0 0 20px;
+    width: 50%;
+}
+
+.places-card h3 {
+    width: 249px;
+}
+
+.places-card p {
+    width: 256px;
+}
+
+.places-card ul {
+    padding-bottom: 30px;
+    font-family: "Work Sans", sans-serif;
+    color: #0C1919;
+    font-size: 14px;
+    padding-left: 29px;
+}
+
+.testimonials {
+    display: inline-block;
+    margin: 0 4% 0 167px;
+    margin: 80px 4% 96px 167px;
+
+
+}
+
+.testimonial-card {
+    width: 45%;
+    float: left;
+    margin-right: 24px;
+    background-color: #DCE6E6;
+    color: #0C1919;
+    border-radius: 10px;
+    padding: 17px;
+    box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
+}
+
+.testimonial-card:last-child {
+    margin-right: 0;
+}
+
+.testimonial-card .text {
+    display: flex;
+}
+
+.testimonial-card img {
+    border-radius: 60px;
+    border: 3px solid #fff;
+}
+
+.testimonial-card p {
+    font-family: "Work Sans", sans-serif;
+    color: #0C1919;
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 25px;
+    width: 328px;
+    line-height: 20px;
+
+}
+
+.testimonial-card .author {
+    color: #4E7777;
+    margin-left: 135px;
+    margin-top: 0;
+}
+
+.footer-container {
+    background-color: #4E7777;
+    padding: 35px 167px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container .socials {
+    display: flex;
+    align-items: center;
+}
+
+.footer-container .socials ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-container .socials a {
+    display: block;
+    width: 42px;
+    height: 40px;
+}
+
+.footer-container .socials li:not(:last-child) {
+    margin-right: 8px;
+}
+
+.footer-container .footer-text {
+    color: #fff;
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+}
+
+
+@media (width<768px) {
+    .opening {
+        min-width: 100%;
+        background-size: cover;
+
+    }
+
+    .opening h1 {
+        font-size: 40px;
+        margin-left: 20px;
+    }
+
+    .opening p {
+        margin: 20px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 455px;
+    }
+
+    .card,
+    .card:first-child,
+    .card:nth-child(3) {
+        padding: 25px;
+        border-radius: 20px;
+    }
+
+    .text-container {
+        margin: 0;
+        padding: 60px 25px;
+    }
+
+    .text-container p {
+        margin: 0;
+
+    }
+
+    .quote-container {
+        height: 100%;
+        background-size: cover;
+        min-width: 100%;
+
+    }
+
+    .quote-container h3 {
+        padding: 96px 25px;
+        max-width: 400px;
+    }
+
+    .places-container {
+        margin: 0;
+        padding: 50px 25px;
+        text-align: center;
+    }
+
+    .places-card1,
+    .places-card {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        width: 100%;
+    }
+    .places-card:last-child img {
+        margin: 40px 0 0 0;
+    }
+
+    .places-card img {
+        aspect-ratio: 1/1;
+    }
+    
+    .places-card1 img,
+    .places-card img {
+        width: 100%;
+    }
+
+
+    .places-card1 .text {
+        padding: 25px;
+        width: 100%;
+    }
+
+    .places-card1 p {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .places-card .text {
+        padding: 24px;
+        width: 100%;
+    }
+
+    .places-card h3 {
+        width: 100%;
+    }
+    .places-card p {
+        width: 100%;
+        font-size: 16px;   
+    }
+
+    .places-card ul {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .testimonials {
+        margin: 0;
+        padding: 60px 24px;
+        width: auto;
+
+    }
+
+    .testimonial-card {
+        width: 100%;
+        margin-bottom: 25px;
+        padding: 0;
+        margin-top: 50px;
+
+    }
+
+    .testimonials h2 {
+        text-align: center;
+    }
+
+    .testimonial-card p {
+        font-size: 16px;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        padding: 6px;
+        margin-top: 0;
+    }
+
+    .testimonial-card .text {
+        flex-direction: row-reverse;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 25px;
+
+    }
+
+    .testimonial-card img {
+        position: relative;
+        top: -39px;
+    }
+
+    .testimonial-card .author {
+        margin-left: 0;
+    }
+
+    .footer-container {
+        min-height: 200px;
+        flex-direction: column;
+        justify-content: end;
+        padding: 0;
+        align-items: center;
+    }
+
+    .footer-container .footer-text {
+        margin-top: 48px;
+    }
+    .footer-container .socials li:not(:last-child) {
+        margin-right: 25px;
+    }
+}
