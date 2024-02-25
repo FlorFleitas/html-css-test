@@ -508,6 +508,11 @@ ul {
         font-size: 16px;
     }
 
+    .places-card1 .text, .places-card .text {
+        text-align: left;
+    }
+
+
     .testimonials {
         margin: 0;
         padding: 60px 24px;
@@ -568,13 +573,14 @@ ul {
     .footer-container .socials li:not(:last-child) {
         margin-right: 25px;
     }
+
 }
 
 @media (min-width:868px) and (max-width:1420px) {
     .opening{
     background-position: initial;
     }
-    
+   
 .testimonials h2 {
     text-align: center;
 }
