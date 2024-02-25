@@ -13,46 +13,66 @@ header {
     align-items: center;
 }
 
+@media (width<868px){
+header {
+    height: 150px;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+}
+
 header img {
     margin: 6px 0 6px 15px;
 }
 
 .menu-toggle {
+    display: none; 
+}
+
+.menu-icon {
     display: none;
-    flex-direction: column;
+    font-size: 24px;
     cursor: pointer;
+    margin: 10px;
 }
 
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 3px 0;
+.nav-links {
+    display: block; 
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
+.nav-links ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        color: #fff;
-    }
+.nav-links ul li {
+    display: block;
+    padding: 10px;
+}
 
-    .nav-links.active {
-        display: flex;
-    }
+.nav-links ul li a {
+    text-decoration: none;
+    color: #0C1919;
+    color: #fff;
+    font-weight: normal;
+}
 
+.menu-toggle:checked + .menu-icon + .nav-links {
+    display: block;
+}
+
+/* Mostrar el menú de navegación en una disposición vertical en pantallas pequeñas */
+@media screen and (max-width: 768px) {
     .nav-links ul li {
-        padding: 15px;
+        display: block;
         text-align: center;
     }
-
-    .nav-links a {
+    .nav-links {
+        display: none; 
+    }
+    .menu-icon {
         display: block;
     }
 }
@@ -445,6 +465,8 @@ ul {
         height: 100%;
         background-size: cover;
         min-width: 100%;
+        display: flex;
+        justify-content: center;
 
     }
 
@@ -455,7 +477,7 @@ ul {
 
     .places-container {
         margin: 0;
-        padding: 50px 25px;
+        padding: 60px 25px;
         text-align: center;
     }
 
@@ -576,7 +598,42 @@ ul {
 
 }
 
-@media (min-width:868px) and (max-width:1420px) {
+@media (min-width:868px) and (max-width:1260px) {
+    .places-container {
+    margin: 79px 56px 80px 56px;
+}
+.places-card1 img {
+    width: 320px;
+}
+.places-card img {
+    width: 391px;
+    aspect-ratio: 1/1;
+}
+.places-card {
+    width: 51%;
+}
+.places-card:last-child img {
+    margin: 40px 0 0 0;
+}
+.card img {
+    max-width: 278px;
+}
+.text-container p {
+    margin: 20px 100px 40px 100px;
+}
+.opening p {
+    margin: 0 247px 0 167px;
+}
+.quote-container h3 {
+    padding: 100px 150px;
+}
+.testimonials {
+    margin: 80px 4% 96px 85px;
+}
+}
+
+
+@media (min-width:1330px) and (max-width:1420px) {
     .opening{
     background-position: initial;
     }
