@@ -15,7 +15,7 @@ header {
 
 @media (width<868px){
 header {
-    height: 150px;
+    height: 160px;
     flex-wrap: wrap;
     align-content: space-around;
     justify-content: space-around;
@@ -63,7 +63,6 @@ header img {
     display: block;
 }
 
-/* Mostrar el menú de navegación en una disposición vertical en pantallas pequeñas */
 @media screen and (max-width: 768px) {
     .nav-links ul li {
         display: block;
@@ -75,6 +74,7 @@ header img {
     .menu-icon {
         display: block;
     }
+
 }
 
 
