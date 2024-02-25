@@ -13,15 +13,15 @@ header {
     align-items: center;
 }
 
-@media (width<868px){
-header {
-    height: 145px;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-around;
-    align-items: flex-end;
-    align-items: center;
-}
+@media (width<868px) {
+    header {
+        height: 145px;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-around;
+        align-items: flex-end;
+        align-items: center;
+    }
 }
 
 header img {
@@ -29,7 +29,7 @@ header img {
 }
 
 .menu-toggle {
-    display: none; 
+    display: none;
 }
 
 .menu-icon {
@@ -40,7 +40,7 @@ header img {
 }
 
 .nav-links {
-    display: block; 
+    display: block;
 }
 
 .nav-links ul {
@@ -60,7 +60,7 @@ header img {
     font-weight: normal;
 }
 
-.menu-toggle:checked + .menu-icon + .nav-links {
+.menu-toggle:checked+.menu-icon+.nav-links {
     display: block;
 }
 
@@ -69,9 +69,11 @@ header img {
         display: block;
         text-align: center;
     }
+
     .nav-links {
-        display: none; 
+        display: none;
     }
+
     .menu-icon {
         display: block;
     }
@@ -301,14 +303,16 @@ ul {
 }
 
 .places-card img {
-    width: 240px;
     border-radius: 10px;
     box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
     margin: 40px 0 0 0;
+    width: 240px;
+
 }
 
 .places-card:last-child img {
     margin: 40px 0 0 20px;
+
 }
 
 .places-card {
@@ -424,6 +428,32 @@ ul {
 
 
 @media (width<868px) {
+    header {
+        align-content: normal;
+
+    }
+
+    .nav-links ul li {
+        padding: 50px; 
+        border-bottom: 1px solid #fff;
+        width: 195px;
+    }
+
+    .nav-links {
+        width: 100%;
+        height: 100%;
+        background-color: #0C1919;
+        z-index: 100;
+    }
+
+    .nav-links ul {
+        background-color: #0C1919;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
     .opening {
         min-width: 100%;
         background-size: cover;
@@ -489,14 +519,20 @@ ul {
         margin-top: 0;
         width: 100%;
     }
+
     .places-card:last-child img {
         margin: 40px 0 0 0;
+        height: 216px;
+        object-fit: cover;
+
     }
 
     .places-card img {
-        aspect-ratio: 1/1;
+        height: 216px;
+        object-fit: cover;
+
     }
-    
+
     .places-card1 img,
     .places-card img {
         width: 100%;
@@ -521,9 +557,10 @@ ul {
     .places-card h3 {
         width: 100%;
     }
+
     .places-card p {
         width: 100%;
-        font-size: 16px;   
+        font-size: 16px;
     }
 
     .places-card ul {
@@ -531,7 +568,8 @@ ul {
         font-size: 16px;
     }
 
-    .places-card1 .text, .places-card .text {
+    .places-card1 .text,
+    .places-card .text {
         text-align: left;
     }
 
@@ -593,6 +631,7 @@ ul {
     .footer-container .footer-text {
         margin-top: 48px;
     }
+
     .footer-container .socials li:not(:last-child) {
         margin-right: 25px;
     }
@@ -601,55 +640,64 @@ ul {
 
 @media (min-width:868px) and (max-width:1260px) {
     .places-container {
-    margin: 79px 56px 80px 56px;
-}
-.places-card1 img {
-    width: 320px;
-}
-.places-card img {
-    width: 391px;
-    aspect-ratio: 1/1;
-}
-.places-card {
-    width: 51%;
-}
-.places-card:last-child img {
-    margin: 40px 0 0 0;
-}
-.card img {
-    max-width: 278px;
-}
-.text-container p {
-    margin: 20px 100px 40px 100px;
-}
-.opening p {
-    margin: 0 247px 0 167px;
-}
-.quote-container h3 {
-    padding: 100px 150px;
-}
-.testimonials {
-    margin: 80px 4% 96px 85px;
-}
+        margin: 79px 56px 80px 56px;
+    }
+
+    .places-card1 img {
+        width: 320px;
+    }
+
+    .places-card img {
+        width: 391px;
+        aspect-ratio: 1/1;
+    }
+
+    .places-card {
+        width: 51%;
+    }
+
+    .places-card:last-child img {
+        margin: 40px 0 0 0;
+    }
+
+    .card img {
+        max-width: 278px;
+    }
+
+    .text-container p {
+        margin: 20px 100px 40px 100px;
+    }
+
+    .opening p {
+        margin: 0 247px 0 167px;
+    }
+
+    .quote-container h3 {
+        padding: 100px 150px;
+    }
+
+    .testimonials {
+        margin: 80px 4% 96px 85px;
+    }
 }
 
 
 @media (min-width:1330px) and (max-width:1420px) {
-    .opening{
-    background-position: initial;
+    .opening {
+        background-position: initial;
     }
-   
-.testimonials h2 {
-    text-align: center;
-}
-.testimonial-card {
-    width: 450px;
-    margin-bottom: 20px;
-}
 
-.testimonials {
-    margin: 96px 167px 96px 167px;
-}
+    .testimonials h2 {
+        text-align: center;
+    }
+
+    .testimonial-card {
+        width: 450px;
+        margin-bottom: 20px;
+    }
+
+    .testimonials {
+        margin: 96px 167px 96px 167px;
+    }
 
 }
-
