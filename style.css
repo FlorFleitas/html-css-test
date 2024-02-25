@@ -15,11 +15,12 @@ header {
 
 @media (width<868px){
 header {
-    height: 160px;
+    height: 145px;
     flex-wrap: wrap;
     align-content: space-around;
     justify-content: space-around;
     align-items: flex-end;
+    align-items: center;
 }
 }
 
