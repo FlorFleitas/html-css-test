@@ -370,7 +370,9 @@ ul {
 }
 
 .testimonial-card img {
-    border-radius: 60px;
+    height: 25%;
+    width: 25%;
+    border-radius: 100px;
     border: 3px solid #fff;
 }
 
@@ -434,7 +436,7 @@ ul {
     }
 
     .nav-links ul li {
-        padding: 50px; 
+        padding: 50px;
         border-bottom: 1px solid #fff;
         width: 195px;
     }
