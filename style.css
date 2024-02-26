@@ -64,7 +64,7 @@ header img {
     display: block;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 868px) {
     .nav-links ul li {
         display: block;
         text-align: center;
@@ -660,9 +660,6 @@ ul {
         margin: 40px 0 0 0;
     }
 
-    .card img {
-        max-width: 278px;
-    }
 
     .text-container p {
         margin: 20px 100px 40px 100px;
