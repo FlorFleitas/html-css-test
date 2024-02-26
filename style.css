@@ -110,7 +110,7 @@ ul {
 }
 
 .opening {
-    background-image: url("/images/portada.jpg");
+    background-image: url("/images/portada.webp");
     background-repeat: no-repeat;
     position: absolute;
     z-index: 1;
@@ -225,7 +225,7 @@ ul {
 }
 
 .quote-container {
-    background-image: url("/images/fondo-ola.jpg");
+    background-image: url("/images/fondo-ola.webp");
     background-repeat: no-repeat;
     min-height: 70%;
     min-width: 700px;
@@ -410,7 +410,7 @@ ul {
     margin: 0;
 }
 
-.footer-container .socials a {
+.footer-container .socials a img {
     display: block;
     width: 42px;
     height: 40px;
