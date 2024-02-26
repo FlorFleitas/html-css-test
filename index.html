@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fernando de Noronha</title>
     <meta name="description" content="Fernando de Noronha es un paraiso natural en el nordeste de Brasil">
-    <link rel="stylesheet" media="all" href="style.css">
+    <link href="style.css" rel="stylesheet" media="all">
 </head>
 
 <body>
     <main>
         <header>
-            <img src="/images/logo.webp" alt="">
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <img src="/images/logo.webp" alt>
+            <input class="menu-toggle" id="menu-toggle" type="checkbox">
+            <label class="menu-icon" for="menu-toggle">&#9776;</label>
             <nav class="nav-links">
                 <ul>
                     <li><a href="#location">Como llegar</a></li>
                     <li><a href="#videos">Videos</a></li>
                     <li><a href="#photos">Fotos</a></li>
                     <li><a href="#places">Lugares destacados</a></li>
-                    <li><a href="#home" class="active">Inicio</a></li>
+                    <li><a class="active" href="#home">Inicio</a></li>
                 </ul>
             </nav>
         </header>
@@ -35,7 +35,7 @@
 
         <section class="cards-container">
             <div class="card">
-                <img src="/images/actividades/tamar.webp" loading="lazy" alt="Imagen de Tamar">
+                <img src="/images/actividades/tamar.webp" alt="Imagen de Tamar" loading="lazy">
                     <h3>Reserva Natural</h3>
                         <p>Fundado a principios de la década de 1980, el Proyecto TAMAR surgió con el objetivo de proteger
                     especies de tortugas gigantes amenazadas de extinción en la costa.</p>
@@ -43,25 +43,25 @@
             </div>
 
             <div class="card">
-                <img src="/images/actividades/buceo.webp" loading="lazy" alt="Imagen de Buceo">
-                <h3>Buceo</h3>
-                <p>Debido a la Corriente Ecuatorial del Sur, que empuja el agua cálida de África a las islas, el buceo a
+                <img src="/images/actividades/buceo.webp" alt="Imagen de Buceo" loading="lazy">
+                    <h3>Buceo</h3>
+                        <p>Debido a la Corriente Ecuatorial del Sur, que empuja el agua cálida de África a las islas, el buceo a
                     profundidades de 30 a 40 metros no requiere un traje de neopreno.</p>
-                <a href="#">Ampliar</a>
+                            <a href="#">Ampliar</a>
             </div>
 
             <div class="card">
-                <img src="/images/actividades/surf.webp" loading="lazy" alt="Imagen de Surf">
-                <h3>Surf</h3>
-                <p>Fernando de Noronha es, sin duda, uno de los mejores lugares de Brasil para la práctica del surf, y
+                <img src="/images/actividades/surf.webp" alt="Imagen de Surf" loading="lazy">
+                    <h3>Surf</h3>
+                        <p>Fernando de Noronha es, sin duda, uno de los mejores lugares de Brasil para la práctica del surf, y
                     sus olas tubulares y cristalinas atraen a los surfistas.</p>
-                <a href="#">Ampliar</a>
+                            <a href="#">Ampliar</a>
             </div>
         </section>
     </main>
     <div class="text-container">
         <h2>Un lugar imperdible</h2>
-        <p>Es considerado uno de los mejores puntos de buceo de Brasil, por lo que muchos ecoturistas viajan al
+            <p>Es considerado uno de los mejores puntos de buceo de Brasil, por lo que muchos ecoturistas viajan al
             archipiélago exclusivamente para bucear. Los turistas que van a "Noroña" (como es comúnmente llamado) no
             buscan centros nocturnos ni grandes hoteles, sino que están dispuestos a tener un poco de incomodidades
             con tal de disfrutar de la naturaleza única del archipiélago.</p>
@@ -73,10 +73,10 @@
     </div>
     <section class="places-container">
         <h2>Lugares destacados</h2>
-        <div class="places-card1">
-            <div class="img-container">
-                <img src="/images/playas/baia-do-sancho.webp" loading="lazy" alt="Imagen de la playa Baia do Sancho">
-            </div>
+            <div class="places-card1">
+                <div class="img-container">
+                    <img src="/images/playas/baia-do-sancho.webp" alt="Imagen de la playa Baia do Sancho" loading="lazy">
+                </div>
             <div class="text">
                 <h3>Baia do Sancho</h3>
                     <p>Aislada, de arena fina y dorada, bañada por un agua verde esmeralda y rodeada de vegetación y
@@ -92,7 +92,7 @@
 
         <div class="places-card">
             <div class="img-container">
-                <img src="/images/playas/baia-dos-porcos.webp" loading="lazy" alt="Imagen de Baia Dos Porcos">
+                <img src="/images/playas/baia-dos-porcos.webp" alt="Imagen de Baia Dos Porcos" loading="lazy">
             </div>
             <div class="text">
                 <h3>Baia dos Porcos</h3>
@@ -109,7 +109,7 @@
         </div>
         <div class="places-card">
             <div class="img-container">
-                <img src="/images/playas/cacimba-do-padre.webp" loading="lazy" alt="Imagen de Cacimba Do Padre">
+                <img src="/images/playas/cacimba-do-padre.webp" alt="Imagen de Cacimba Do Padre" loading="lazy">
             </div>
             <div class="text">
                 <h3>Cacimba do Padre</h3>
@@ -127,32 +127,29 @@
 
     <section class=" testimonials">
         <h2>Testimonios</h2>
-        <div class="testimonial-card">
-            <div class="text">
-                <img src="/images/testimonios/graciela.webp" loading="lazy" alt="Imagen de Graciela">
-                <p>“Este lugar es muy buena opción, recomendable para olvidar lo cotidiano, tranquilidad,
+            <div class="testimonial-card">
+                <div class="text">
+                    <img src="/images/testimonios/graciela.webp" alt="Imagen de Graciela" loading="lazy">
+                        <p>“Este lugar es muy buena opción, recomendable para olvidar lo cotidiano, tranquilidad,
                     naturaleza, belleza inexplicable.”</p>
+                </div>
+                    <p class="author">Graciela, 24 años</p>
             </div>
-            <p class="author">Graciela, 24 años</p>
-        </div>
         <div class="testimonial-card">
             <div class="text">
-                <img src="/images/testimonios/pablo.webp" loading="lazy" alt="Imagen de Pablo">
+                <img src="/images/testimonios/pablo.webp" alt="Imagen de Pablo" loading="lazy">
                 <p>“Un must!!!! bajar por la escalera hacia la playa, suma adrenalina. muy muy lindo. Tener en
                     cuenta q hay horarios para subir, bajar y para la presencia de tiburones”</p>
             </div>
-            <p class="author">Pablo, 32 años</p>
+                    <p class="author">Pablo, 32 años</p>
         </div>
     </section>
     <footer class="footer-container">
         <div class="socials">
             <ul>
-                <li><a class="facebook" target=_blank href="https://www.facebook.com/ConciergeNoronha/"><img
-                            src="/images/social/facebook.svg" alt="logo de facebook"></a></li>
-                <li><a class="instagram" target=_blank href="https://www.instagram.com/noronha_oficial/"><img
-                            src="/images/social/instagram.svg" loading="lazy" alt="logo de instagram"></a></li>
-                <li><a class="twitter" target=_blank href="https://twitter.com/noronhape"><img
-                            src="/images/social/twitter.svg" loading="lazy" alt="logo de twitter"></a></li>
+                <li><a class="facebook" href="https://www.facebook.com/ConciergeNoronha/" target="_blank"><img src="/images/social/facebook.svg" alt="logo de facebook"></a></li>
+                <li><a class="instagram" href="https://www.instagram.com/noronha_oficial/" target="_blank"><img src="/images/social/instagram.svg" alt="logo de instagram" loading="lazy"></a></li>
+                <li><a class="twitter" href="https://twitter.com/noronhape" target="_blank"><img src="/images/social/twitter.svg" alt="logo de twitter" loading="lazy"></a></li>
             </ul>
         </div>
         <p class="footer-text">Todos los derechos reservados © Noronha</p>
