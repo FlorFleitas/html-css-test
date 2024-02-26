@@ -544,7 +544,7 @@ ul {
     }
 
     .places-card1 img,
-    .places-card img {
+    .places-card img, .places-card .img-container {
         width: 100%;
     }
 
