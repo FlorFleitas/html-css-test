@@ -67,6 +67,7 @@ header img {
 }
 
 .opening {
+    background-image: url("/images/portada.webp");
     background-repeat: no-repeat;
     position: absolute;
     z-index: 1;
@@ -181,7 +182,7 @@ header img {
 }
 
 .quote-container {
-    background-image: url("/images/fondo-ola.jpg");
+    background-image: url("/images/fondo-ola.webp");
     background-repeat: no-repeat;
     min-height: 70%;
     min-width: 700px;
