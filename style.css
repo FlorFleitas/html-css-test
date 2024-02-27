@@ -69,7 +69,7 @@ header img {
 }
 
 .opening {
-    background-image: url("/images/portada.webp");
+    background-image: url("/images/portada.jpg");
     background-repeat: no-repeat;
     position: absolute;
     z-index: 1;
@@ -184,7 +184,7 @@ header img {
 }
 
 .quote-container {
-    background-image: url("/images/fondo-ola.webp");
+    background-image: url("/images/fondo-ola.jpg");
     background-repeat: no-repeat;
     min-height: 70%;
     min-width: 700px;
@@ -575,10 +575,6 @@ header img {
 
     }
 
-    .testimonials h2 {
-        text-align: center;
-    }
-
     .testimonial-card p {
         font-size: 16px;
         width: 100%;
@@ -629,6 +625,7 @@ header img {
     .card img {
         max-width: 255px;
     }
+
     .card {
         width: 259px;
     }
@@ -665,7 +662,30 @@ header img {
     }
 
     .testimonials {
-        margin: 80px 4% 96px 85px;
+        margin: 80px 56px 96px 56px;
+    }
+
+    .testimonial-card {
+        width: 45%;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .testimonial-card p {
+        margin-left: 4%;
+        margin-top: 8%;
+    }
+
+    .testimonial-card .author {
+        margin-left: 28%;
+    }
+
+    .testimonial-card img {
+        border-radius: 135px;
+        height: 25%;
+        width: 15%;
+        margin: 37px;
+
     }
 }
 
@@ -673,10 +693,6 @@ header img {
 @media (min-width:1330px) and (max-width:1420px) {
     .opening {
         background-position: initial;
-    }
-
-    .testimonials h2 {
-        text-align: center;
     }
 
     .testimonial-card {
