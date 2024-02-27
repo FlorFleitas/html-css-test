@@ -388,8 +388,30 @@ header img {
     font-size: 16px;
 }
 
+@media screen and (max-width:367px) {
+    .card {
+        width: 250px;
+    }
 
-@media screen and (max-width:868px) {
+    .card img {
+        max-width: 250px;
+    }
+
+    .quote-container h3 {
+        max-width: 100%;
+    }
+
+    .cards-container {
+        margin-top: 460px;
+    }
+
+    .footer-container .footer-text {
+        margin: 31px 10px;
+    }
+}
+
+@media (max-width:868px) {
+
     .nav-links ul li {
         display: block;
         text-align: center;
@@ -446,9 +468,15 @@ header img {
 
     }
 
-    .opening h1 {
+    .opening h1,
+    .places-container h2,
+    .testimonials h2,
+    .text-container h2 {
         font-size: 40px;
         margin-left: 20px;
+        text-align: center;
+        margin-left: 0;
+
     }
 
     .opening p {
@@ -458,13 +486,13 @@ header img {
     .cards-container {
         flex-direction: column;
         align-items: center;
-        margin-top: 455px;
+        margin-top: 460px;
     }
 
     .card,
     .card:first-child,
     .card:nth-child(3) {
-        padding: 25px;
+        padding: 24px 18px;
         border-radius: 20px;
     }
 
