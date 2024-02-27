@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+:root {
+    --color-primary: #4E7777;
+    --color-secondary: #0C1919;
+    --font-family-heading: "Indie Flower", cursive;
+    --font-family-text: "Work Sans", sans-serif;
+    --marginf-small: 60px;
+    --margin-medium: 170px;
+    --margin-large: 330px;
+}
 
 body {
     margin: 0;
 }
 
+/* Estilos para el encabezado */
 header {
-    background-color: #0C1919;
+    background-color: var(--color-secondary);
     color: #fff;
     display: flex;
     justify-content: space-around;
@@ -18,6 +27,7 @@ header img {
     margin: 6px 0 6px 15px;
 }
 
+/* Estilos para la navegación */
 .menu-toggle {
     display: none;
 }
@@ -58,17 +68,18 @@ header img {
     padding: 6px 18px 6px 18px;
     text-decoration: none;
     color: #fff;
-    font-family: "Work Sans", sans-serif;
+    font-family: var(--font-family-text);
     font-weight: normal;
 }
 
 .nav-links ul li a:active,
-.nav-links ul li a .active,
+.nav-links ul li a.active,
 .nav-links ul li a:hover {
     background-color: #88AAAA;
     border-radius: 8px;
 }
 
+/* Estilos para la portada */
 .opening {
     background-image: url("/images/portada.webp");
     background-repeat: no-repeat;
@@ -81,25 +92,26 @@ header img {
 }
 
 .opening h1 {
-    font-family: "Indie Flower", cursive;
+    font-family: var(--font-family-heading);
     color: #fff;
     letter-spacing: 1px;
     font-size: 55px;
     font-weight: 100;
-    margin: 58px 0 0 167px;
+    margin: var(--marginf-small) 0 0 var(--margin-medium);
 }
 
 .opening p {
-    font-family: "Work Sans", sans-serif;
+    font-family: var(--font-family-text);
     color: #fff;
     margin-left: 318px;
-    margin: 0 623px 0 167px;
+    margin: 0 623px 0 var(--margin-medium);
     font-size: 16px;
     line-height: 24px;
     font-weight: 300;
     letter-spacing: 0.8px;
 }
 
+/* Estilos para las actividades */
 .cards-container {
     display: flex;
     margin-top: 354px;
@@ -133,16 +145,16 @@ header img {
 }
 
 .card h3 {
-    font-family: "Indie Flower", cursive;
-    color: #4E7777;
+    font-family: var(--font-family-heading);
+    color: var(--color-primary);
     font-size: 35px;
     margin: 25px 0 0 0;
     font-weight: 400;
 }
 
 .card p {
-    font-family: "Work Sans", sans-serif;
-    color: #0C1919;
+    font-family: var(--font-family-text);
+    color: var(--color-secondary);
     margin-top: 0;
     line-height: 22px;
 }
@@ -150,22 +162,27 @@ header img {
 .card a,
 .places-card1 a,
 .places-card a {
-    background-color: #4E7777;
+    background-color: var(--color-primary);
     color: #fff;
     text-decoration: none;
-    font-family: "Work Sans", sans-serif;
+    font-family: var(--font-family-text);
     padding: 7px 15px;
     border-radius: 7px;
     box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
 }
 
+/* Estilos para el texto y la frase */
 .text-container {
-    margin: 70px 0 50px 0;
+    margin: var(--marginf-small) 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .text-container h2 {
     text-align: center;
-    font-family: "Indie Flower", cursive;
+    font-family: var(--font-family-heading);
     color: #E1A142;
     letter-spacing: 1px;
     font-size: 55px;
@@ -175,13 +192,13 @@ header img {
 }
 
 .text-container p {
-    font-family: "Work Sans", sans-serif;
-    color: #0C1919;
+    font-family: var(--font-family-text);
+    color: var(--color-secondary);
     line-height: 22px;
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 20px 330px 40px 330px;
+    margin: 20px var(--margin-large) 40px var(--margin-large);
 }
 
 .quote-container {
@@ -197,7 +214,7 @@ header img {
 
 .quote-container h3 {
     text-align: left;
-    font-family: "Indie Flower", cursive;
+    font-family: var(--font-family-heading);
     font-size: 32px;
     color: #fff;
     font-weight: 100;
@@ -206,13 +223,17 @@ header img {
 
 }
 
+/* Estilos para la lugares destacados */
 .places-container {
-    margin: 80px 4% 80px 167px;
+    margin: var(--marginf-small) var(--margin-medium) var(--marginf-small) var(--margin-medium);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .places-container h2,
 .testimonials h2 {
-    font-family: "Indie Flower", cursive;
+    font-family: var(--font-family-heading);
     color: #E1A142;
     letter-spacing: 1px;
     font-size: 55px;
@@ -226,7 +247,7 @@ header img {
 }
 
 .places-card1 img {
-    width: 600px;
+    width: 570px;
     border-radius: 10px;
     box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
     flex: 1;
@@ -239,8 +260,8 @@ header img {
 
 .places-card1 h3,
 .places-card h3 {
-    font-family: "Indie Flower", cursive;
-    color: #4E7777;
+    font-family: var(--font-family-heading);
+    color: var(--color-primary);
     font-size: 35px;
     margin: 34px 0 0 0;
     font-weight: 400;
@@ -248,15 +269,15 @@ header img {
 }
 
 .places-card1 p {
-    font-family: "Work Sans", sans-serif;
-    color: #0C1919;
+    font-family: var(--font-family-text);
+    color: var(--color-secondary);
     line-height: 22px;
     width: 407px;
 }
 
 .places-card p {
-    font-family: "Work Sans", sans-serif;
-    color: #0C1919;
+    font-family: var(--font-family-text);
+    color: var(--color-secondary);
     line-height: 20px;
     width: 407px;
     font-size: 14px;
@@ -277,8 +298,8 @@ header img {
 
 .places-card {
     display: flex;
-    width: 44%;
-    float: left;
+    width: 50%;
+    align-items: center;
 }
 
 .places-card .text {
@@ -296,26 +317,31 @@ header img {
 
 .places-card ul {
     padding-bottom: 30px;
-    font-family: "Work Sans", sans-serif;
-    color: #0C1919;
+    font-family: var(--font-family-text);
+    color: var(--color-secondary);
     font-size: 14px;
     padding-left: 29px;
 }
 
+/* Estilos para los testimonios */
 .testimonials {
-    display: inline-block;
-    margin: 0 4% 0 167px;
-    margin: 80px 4% 96px 167px;
-
+    display: flex;
+    flex-direction: column;
+    margin: var(--marginf-small) var(--margin-medium);
 
 }
 
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+}
+
 .testimonial-card {
-    width: 45%;
+    width: 50%;
     float: left;
     margin-right: 24px;
     background-color: #DCE6E6;
-    color: #0C1919;
+    color: var(--color-secondary);
     border-radius: 10px;
     padding: 17px;
     box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
@@ -330,15 +356,13 @@ header img {
 }
 
 .testimonial-card img {
-    height: 25%;
-    width: 25%;
     border-radius: 100px;
     border: 3px solid #fff;
 }
 
 .testimonial-card p {
-    font-family: "Work Sans", sans-serif;
-    color: #0C1919;
+    font-family: var(--font-family-text);
+    color: var(--color-secondary);
     font-size: 14px;
     font-style: italic;
     margin-left: 25px;
@@ -348,14 +372,16 @@ header img {
 }
 
 .testimonial-card .author {
-    color: #4E7777;
+    color: var(--color-primary);
     margin-left: 135px;
     margin-top: 0;
 }
 
+/* Estilos para el footer*/
+
 .footer-container {
-    background-color: #4E7777;
-    padding: 35px 167px;
+    background-color: var(--color-primary);
+    padding: 30px 170px;
     display: flex;
     justify-content: space-between;
 }
@@ -384,11 +410,14 @@ header img {
 
 .footer-container .footer-text {
     color: #fff;
-    font-family: "Work Sans", sans-serif;
+    font-family: var(--font-family-text);
     font-size: 16px;
 }
 
-@media screen and (max-width:367px) {
+
+/* Estilos para la mobile view hasta 368w*/
+
+@media screen and (max-width:368px) {
     .card {
         width: 250px;
     }
@@ -409,6 +438,8 @@ header img {
         margin: 31px 10px;
     }
 }
+
+/* Estilos para la mobile view hasta 868w*/
 
 @media (max-width:868px) {
 
@@ -443,12 +474,12 @@ header img {
     .nav-links {
         width: 100%;
         height: 100%;
-        background-color: #0C1919;
+        background-color: var(--color-secondary);
         z-index: 100;
     }
 
     .nav-links ul {
-        background-color: #0C1919;
+        background-color: var(--color-secondary);
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
@@ -492,7 +523,7 @@ header img {
     .card,
     .card:first-child,
     .card:nth-child(3) {
-        padding: 24px 18px;
+        padding: 24px 15px;
         border-radius: 20px;
     }
 
@@ -603,6 +634,9 @@ header img {
         margin-top: 50px;
 
     }
+    .testimonials-container {
+        flex-direction: column;
+    }
 
     .testimonial-card p {
         font-size: 16px;
@@ -637,6 +671,7 @@ header img {
         justify-content: end;
         padding: 0;
         align-items: center;
+
     }
 
     .footer-container .footer-text {
@@ -649,6 +684,8 @@ header img {
 
 }
 
+/* Estilos para la mobile view hasta 1260w*/
+
 @media (min-width:868px) and (max-width:1260px) {
 
     .card img {
@@ -660,7 +697,7 @@ header img {
     }
 
     .places-container {
-        margin: 79px 56px 80px 56px;
+        margin: var(--marginf-small) var(--margin-medium);
     }
 
     .places-card img,
@@ -669,8 +706,16 @@ header img {
         aspect-ratio: 1/1;
     }
 
-    .places-card {
-        width: 51%;
+    .places-card,
+    .places-card1 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+
+    .places-card1 p {
+        width: 100%;
     }
 
     .places-card:last-child img {
@@ -683,7 +728,7 @@ header img {
     }
 
     .opening p {
-        margin: 0 247px 0 167px;
+        margin: 0 247px 0 var(--margin-medium);
     }
 
     .quote-container h3 {
@@ -691,11 +736,21 @@ header img {
     }
 
     .testimonials {
-        margin: 80px 56px 96px 56px;
+        display: flex;
+        margin: var(--marginf-small) var(--margin-medium);
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .testimonials-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
     }
 
     .testimonial-card {
-        width: 48%;
+        width: 100%;
         margin-bottom: 0;
         padding: 0;
         min-height: 182px;
@@ -719,19 +774,24 @@ header img {
     }
 }
 
-
+/* Estilos para la mobile view hasta 1420w*/
 @media (min-width:1330px) and (max-width:1420px) {
     .opening {
         background-position: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .testimonial-card {
-        width: 450px;
         margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     .testimonials {
-        margin: 96px 167px 96px 167px;
+        margin: var(--marginf-small) var(--margin-medium) var(--marginf-small) var(--margin-medium);
     }
 
 }
