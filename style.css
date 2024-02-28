@@ -61,7 +61,7 @@ body {
 
 .header-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -97,14 +97,14 @@ body {
     padding: 10px;
     color: white;
     float: right;
-    font-size: 16px;
+    font-size: var(--font-size--text);
     list-style: none;
     padding-right: 6px;
 }
 
 
 .nav-links ul li a {
-    padding: 6px 18px 6px 18px;
+    padding: 6px 18px;
     text-decoration: none;
     color: #fff;
     font-family: var(--font-family-text);
@@ -131,14 +131,14 @@ body {
     font-family: var(--font-family-heading);
     color: #fff;
     letter-spacing: 1px;
-    font-size: 55px;
+    font-size: var(--font-size-title);
     font-weight: 100;
 }
 
 .opening p {
     font-family: var(--font-family-text);
     color: #fff;
-    font-size: 16px;
+    font-size: var(--font-size--text);
     line-height: 24px;
     font-weight: 300;
     letter-spacing: 0.8px;
@@ -206,7 +206,7 @@ body {
     font-family: var(--font-family-heading);
     color: #E1A142;
     letter-spacing: 1px;
-    font-size: 55px;
+    font-size: var(--font-size-title);
     font-weight: 100;
     margin-bottom: 0;
     margin-top: 0;
@@ -465,7 +465,17 @@ body {
 /* Estilos para la mobile view hasta 868w*/
 
 @media (max-width:868px) {
+    .menu-toggle:checked + label {
+        position: fixed; 
+        top: 10px;
+        right: 10px; 
+        transform: rotate(90deg);
+        transition: transform 0.3s ease; 
+      }
 
+    .menu-toggle:checked+.nav-links {
+        display: flex;
+    }
 
     .nav-links ul li {
         display: block;
@@ -482,7 +492,7 @@ body {
     }
 
     .nav-links ul li {
-        padding: 50px;
+        padding: 30px;
         border-bottom: 1px solid #fff;
         width: 195px;
     }
@@ -587,7 +597,7 @@ body {
 
     .places-card1 .text {
         padding: 0;
-        width: 100%;
+        width: auto;
     }
 
     .places-card1 p {
@@ -597,7 +607,7 @@ body {
 
     .places-card .text {
         padding: 24px;
-        width: 100%;
+        width: auto;
     }
 
     .places-card h3 {
@@ -685,8 +695,8 @@ body {
 /* Estilos para la mobile view hasta 1260w*/
 
 @media (min-width:868px) and (max-width:1260px) {
-    .opening {
-        gap: 10px;
+    .nav-links ul:last-child li {
+        padding-right: 0;
     }
 
     .opening h1 {
@@ -700,9 +710,17 @@ body {
     }
 
     .cards-container {
-        width: min-content;
+        width: auto;
         transform: translateY(-80px);
         gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card img {
+        width: 100%;
     }
 
     .places-card img,
@@ -725,12 +743,17 @@ body {
 
     .testimonial-card {
         padding: 10px;
+        width: 47%;
     }
 
 }
 
 /* Estilos para la mobile view hasta 1920w*/
 @media (min-width:1260px) and (max-width:2920px) {
+    .nav-links ul:last-child li {
+        padding-right: 0;
+    }
+
     .opening {
         background-position: initial;
         display: flex;
