@@ -1,5 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+.content-grid {
+    --padding-inline: 1rem;
+    --content-max-width: 1024px;
+    --breakout-max-width: 1200px;
+
+    --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+
+    display: grid;
+    grid-template-columns:
+        [full-width-start] minmax(var(--padding-inline), 1fr) [breakout-start] minmax(0, var(--breakout-size)) [content-start] min(100% - (var(--padding-inline) * 2),
+            var(--content-max-width)) [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid> :not(.breakout, .full-width),
+.full-width> :not(.breakout, .full-width) {
+    grid-column: content;
+}
+
+.content-grid>.breakout {
+    grid-column: breakout;
+}
+
+.content-grid>.full-width {
+    grid-column: full-width;
+
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+img.full-width {
+    width: 100%;
+    max-height: 45vh;
+    object-fit: cover;
+}
+
 :root {
     --color-primary: #4E7777;
     --color-secondary: #0C1919;
@@ -8,6 +44,8 @@
     --marginf-small: 60px;
     --margin-medium: 170px;
     --margin-large: 330px;
+    --font-size-title: 56px;
+    --font-size--text: 16px;
 }
 
 body {
@@ -15,17 +53,18 @@ body {
 }
 
 /* Estilos para el encabezado */
-header {
+.header-container {
     background-color: var(--color-secondary);
     color: #fff;
+    height: 80px;
+}
+
+.header-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-header img {
-    margin: 6px 0 6px 15px;
-}
 
 /* Estilos para la navegación */
 .menu-toggle {
@@ -83,12 +122,9 @@ header img {
 .opening {
     background-image: url("/images/portada.webp");
     background-repeat: no-repeat;
-    position: absolute;
-    z-index: 1;
-    min-height: 67%;
-    min-width: 700px;
-    background-position: top;
-    background-size: 140%;
+    height: 440px;
+    grid-template-rows: 100px 100px;
+    padding-top: 20px;
 }
 
 .opening h1 {
@@ -97,29 +133,25 @@ header img {
     letter-spacing: 1px;
     font-size: 55px;
     font-weight: 100;
-    margin: var(--marginf-small) 0 0 var(--margin-medium);
 }
 
 .opening p {
     font-family: var(--font-family-text);
     color: #fff;
-    margin-left: 318px;
-    margin: 0 623px 0 var(--margin-medium);
     font-size: 16px;
     line-height: 24px;
     font-weight: 300;
     letter-spacing: 0.8px;
+
 }
 
 /* Estilos para las actividades */
 .cards-container {
     display: flex;
-    margin-top: 354px;
-    width: 100%;
     justify-content: center;
-    position: relative;
-    z-index: 1;
-
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 25px;
 }
 
 .card img {
@@ -131,17 +163,7 @@ header img {
 .card {
     width: 326px;
     background-color: #fff;
-    padding: 25px 20px;
-}
-
-.card:first-child {
-    border-radius: 20px 0 0 20px;
-    padding: 25px 0 25px 25px;
-}
-
-.card:nth-child(3) {
-    border-radius: 0 20px 20px 0;
-    padding: 25px 25px 25px 0;
+    padding: 0;
 }
 
 .card h3 {
@@ -173,11 +195,10 @@ header img {
 
 /* Estilos para el texto y la frase */
 .text-container {
-    margin: var(--marginf-small) 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
 }
 
 .text-container h2 {
@@ -198,18 +219,16 @@ header img {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 20px var(--margin-large) 40px var(--margin-large);
+    width: 676px;
+    margin-bottom: 40px;
 }
 
 .quote-container {
     background-image: url("/images/fondo-ola.webp");
     background-repeat: no-repeat;
-    min-height: 70%;
-    min-width: 700px;
-    background-position: center;
     background-position: 50% 41%;
-    height: 436px;
-    background-size: 140%;
+    height: 424px;
+    place-items: center;
 }
 
 .quote-container h3 {
@@ -219,13 +238,12 @@ header img {
     color: #fff;
     font-weight: 100;
     line-height: 40px;
-    padding: 115px 371px;
+    width: 575px;
 
 }
 
 /* Estilos para la lugares destacados */
 .places-container {
-    margin: var(--marginf-small) var(--margin-medium) var(--marginf-small) var(--margin-medium);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -236,9 +254,9 @@ header img {
     font-family: var(--font-family-heading);
     color: #E1A142;
     letter-spacing: 1px;
-    font-size: 55px;
+    font-size: var(--font-size-title);
     font-weight: 100;
-    margin: 0 0 8px 0;
+    margin: 80px 0 10px 0;
 }
 
 .places-card1 {
@@ -247,7 +265,7 @@ header img {
 }
 
 .places-card1 img {
-    width: 570px;
+    width: 589px;
     border-radius: 10px;
     box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
     flex: 1;
@@ -272,7 +290,7 @@ header img {
     font-family: var(--font-family-text);
     color: var(--color-secondary);
     line-height: 22px;
-    width: 407px;
+    width: 415px;
 }
 
 .places-card p {
@@ -287,12 +305,7 @@ header img {
     border-radius: 10px;
     box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
     margin: 40px 0 0 0;
-    width: 240px;
-
-}
-
-.places-card:last-child img {
-    margin: 40px 0 0 20px;
+    width: 241px;
 
 }
 
@@ -304,15 +317,14 @@ header img {
 
 .places-card .text {
     padding: 50px 0 0 20px;
-    width: 50%;
 }
 
 .places-card h3 {
-    width: 249px;
+    width: 241px;
 }
 
 .places-card p {
-    width: 256px;
+    width: 241px;
 }
 
 .places-card ul {
@@ -327,28 +339,24 @@ header img {
 .testimonials {
     display: flex;
     flex-direction: column;
-    margin: var(--marginf-small) var(--margin-medium);
 
 }
 
 .testimonials-container {
     display: flex;
     justify-content: center;
+    gap: 25px;
+    margin-bottom: 80px;
 }
 
 .testimonial-card {
     width: 50%;
     float: left;
-    margin-right: 24px;
     background-color: #DCE6E6;
     color: var(--color-secondary);
     border-radius: 10px;
     padding: 17px;
     box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
-}
-
-.testimonial-card:last-child {
-    margin-right: 0;
 }
 
 .testimonial-card .text {
@@ -358,6 +366,8 @@ header img {
 .testimonial-card img {
     border-radius: 100px;
     border: 3px solid #fff;
+    width: 100px;
+    height: 100px;
 }
 
 .testimonial-card p {
@@ -366,7 +376,7 @@ header img {
     font-size: 14px;
     font-style: italic;
     margin-left: 25px;
-    width: 328px;
+    width: 327px;
     line-height: 20px;
 
 }
@@ -375,40 +385,47 @@ header img {
     color: var(--color-primary);
     margin-left: 135px;
     margin-top: 0;
+    width: 118px;
+
 }
 
 /* Estilos para el footer*/
 
 .footer-container {
     background-color: var(--color-primary);
-    padding: 30px 170px;
-    display: flex;
-    justify-content: space-between;
+    height: 119px;
 }
 
-.footer-container .socials {
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer-content .socials {
     display: flex;
     align-items: center;
 }
 
-.footer-container .socials ul {
+.footer-content ul {
     list-style: none;
     display: flex;
     padding: 0;
     margin: 0;
 }
 
-.footer-container .socials a img {
+.footer-content .socials a img {
     display: block;
     width: 42px;
     height: 42px;
 }
 
-.footer-container .socials li:not(:last-child) {
+.footer-content .socials li:not(:last-child) {
     margin-right: 8px;
 }
 
-.footer-container .footer-text {
+.footer-content .footer-text {
     color: #fff;
     font-family: var(--font-family-text);
     font-size: 16px;
@@ -426,12 +443,17 @@ header img {
         max-width: 250px;
     }
 
-    .quote-container h3 {
-        max-width: 100%;
+    .text-container p {
+        max-width: 259px;
+
     }
 
-    .cards-container {
-        margin-top: 460px;
+    .quote-container h3 {
+        width: 222px;
+    }
+    .places-card .text {
+        padding: 0;
+
     }
 
     .footer-container .footer-text {
@@ -442,6 +464,7 @@ header img {
 /* Estilos para la mobile view hasta 868w*/
 
 @media (max-width:868px) {
+
 
     .nav-links ul li {
         display: block;
@@ -455,14 +478,6 @@ header img {
     .menu-icon {
         display: block;
         z-index: 1000;
-    }
-
-    header {
-        height: 145px;
-        flex-wrap: wrap;
-        align-content: initial;
-        justify-content: space-around;
-        align-items: center;
     }
 
     .nav-links ul li {
@@ -494,37 +509,25 @@ header img {
     }
 
     .opening {
-        min-width: 100%;
-        background-size: cover;
-
+        gap: 15px 0;
     }
 
-    .opening h1,
+    .opening h1 {
+        font-size: 40px;
+    }
+
     .places-container h2,
     .testimonials h2,
     .text-container h2 {
         font-size: 40px;
-        margin-left: 20px;
         text-align: center;
-        margin-left: 0;
 
-    }
-
-    .opening p {
-        margin: 20px;
     }
 
     .cards-container {
         flex-direction: column;
         align-items: center;
-        margin-top: 460px;
-    }
-
-    .card,
-    .card:first-child,
-    .card:nth-child(3) {
-        padding: 24px 15px;
-        border-radius: 20px;
+        gap: 20px;
     }
 
     .text-container {
@@ -534,6 +537,7 @@ header img {
 
     .text-container p {
         margin: 0;
+        width: 306px;
 
     }
 
@@ -547,14 +551,9 @@ header img {
     }
 
     .quote-container h3 {
-        padding: 96px 25px;
-        max-width: 400px;
-    }
-
-    .places-container {
+        max-width: 272px;
         margin: 0;
         padding: 60px 25px;
-        text-align: center;
     }
 
     .places-card1,
@@ -586,7 +585,7 @@ header img {
 
 
     .places-card1 .text {
-        padding: 25px;
+        padding: 0;
         width: 100%;
     }
 
@@ -620,13 +619,6 @@ header img {
     }
 
 
-    .testimonials {
-        margin: 0;
-        padding: 60px 24px;
-        width: auto;
-
-    }
-
     .testimonial-card {
         width: 100%;
         margin-bottom: 25px;
@@ -634,6 +626,7 @@ header img {
         margin-top: 50px;
 
     }
+
     .testimonials-container {
         flex-direction: column;
     }
@@ -665,6 +658,10 @@ header img {
         margin-left: 0;
     }
 
+    .footer-content {
+        flex-direction: column;
+    }
+
     .footer-container {
         min-height: 200px;
         flex-direction: column;
@@ -674,9 +671,6 @@ header img {
 
     }
 
-    .footer-container .footer-text {
-        margin-top: 48px;
-    }
 
     .footer-container .socials li:not(:last-child) {
         margin-right: 25px;
@@ -687,17 +681,24 @@ header img {
 /* Estilos para la mobile view hasta 1260w*/
 
 @media (min-width:868px) and (max-width:1260px) {
-
-    .card img {
-        max-width: 255px;
+    .opening {
+        gap: 10px;
     }
 
-    .card {
-        width: 259px;
+    .opening h1 {
+        width: 589px;
+        height: 56px;
     }
 
-    .places-container {
-        margin: var(--marginf-small) var(--margin-medium);
+    .opening p {
+        width: 589px;
+        height: 96px;
+    }
+
+    .cards-container {
+        width: min-content;
+        transform: translateY(-80px);
+        gap: 20px;
     }
 
     .places-card img,
@@ -709,89 +710,52 @@ header img {
     .places-card,
     .places-card1 {
         display: flex;
-        justify-content: center;
-        width: 100%;
-        align-items: center;
-    }
-
-    .places-card1 p {
+        justify-content: left;
         width: 100%;
     }
 
-    .places-card:last-child img {
-        margin: 40px 0 0 0;
-    }
-
-
-    .text-container p {
-        margin: 20px 100px 40px 100px;
-    }
-
-    .opening p {
-        margin: 0 247px 0 var(--margin-medium);
-    }
-
-    .quote-container h3 {
-        padding: 100px 150px;
-    }
-
-    .testimonials {
-        display: flex;
-        margin: var(--marginf-small) var(--margin-medium);
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .testimonials-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
+    .places-card1 p,
+    .places-card p {
+        width: 100%;
     }
 
     .testimonial-card {
-        width: 100%;
-        margin-bottom: 0;
-        padding: 0;
-        min-height: 182px;
+        padding: 10px;
     }
 
-    .testimonial-card p {
-        margin-left: 0;
-        margin-top: 8%;
-    }
-
-    .testimonial-card .author {
-        margin-left: 28%;
-    }
-
-    .testimonial-card img {
-        border-radius: 135px;
-        height: 25%;
-        width: 15%;
-        margin: 37px 10px 0 37px;
-
-    }
 }
 
 /* Estilos para la mobile view hasta 1420w*/
-@media (min-width:1330px) and (max-width:1420px) {
+@media (min-width:1260px) and (max-width:1920px) {
     .opening {
         background-position: initial;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .opening h1 {
+        width: 589px;
+        height: 56px;
+    }
+
+    .opening p {
+        width: 589px;
+        height: 96px;
+    }
+
+    .cards-container {
+        width: min-content;
+        transform: translateY(-80px);
+        gap: 20px;
     }
 
     .testimonial-card {
-        margin-bottom: 20px;
         display: flex;
         align-items: center;
         flex-direction: column;
     }
 
-    .testimonials {
-        margin: var(--marginf-small) var(--margin-medium) var(--marginf-small) var(--margin-medium);
-    }
 
 }

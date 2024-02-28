@@ -11,9 +11,11 @@
 </head>
 
 <body>
-    <main>
-        <header>
-            <img src="/images/logo.webp" width="103" height="65" alt="logo">
+    <main class="content-grid">
+        <header class="content-grid full-width">
+            <div class="header-container full-width content-grid">
+                <div class="header-content">
+            <img src="/images/logo.webp" alt="logo" width="103" height="65">
             <input class="menu-toggle" id="menu-toggle" type="checkbox">
             <label class="menu-icon" for="menu-toggle">&#9776;</label>
             <nav class="nav-links">
@@ -25,9 +27,11 @@
                     <li><a class="active" href="#home">Inicio</a></li>
                 </ul>
             </nav>
+        </div>
+    </div>
         </header>
 
-        <div class="opening">
+        <div class="opening full-width">
             <h1>Fernando de Noronha</h1>
             <p>Es un archipiélago volcánico brasileño, perteneciente al estado de Pernambuco. Se encuentra en el océano
                 Atlántico, a 710 km de Fortaleza (capital de Ceará), 360 km de Natal (capital de Río Grande del Norte),
@@ -36,7 +40,7 @@
 
         <section class="cards-container">
             <div class="card">
-                <img src="/images/actividades/tamar.webp" width="328" height="217" alt="Imagen de Tamar" loading="lazy">
+                <img src="/images/actividades/tamar.webp" alt="Imagen de Tamar" width="328" height="217" loading="lazy">
                     <h3>Reserva Natural</h3>
                         <p>Fundado a principios de la década de 1980, el Proyecto TAMAR surgió con el objetivo de proteger
                     especies de tortugas gigantes amenazadas de extinción en la costa.</p>
@@ -44,7 +48,7 @@
             </div>
 
             <div class="card">
-                <img src="/images/actividades/buceo.webp" width="328" height="217" alt="Imagen de Buceo" loading="lazy">
+                <img src="/images/actividades/buceo.webp" alt="Imagen de Buceo" width="328" height="217" loading="lazy">
                     <h3>Buceo</h3>
                         <p>Debido a la Corriente Ecuatorial del Sur, que empuja el agua cálida de África a las islas, el buceo a
                     profundidades de 30 a 40 metros no requiere un traje de neopreno.</p>
@@ -52,14 +56,13 @@
             </div>
 
             <div class="card">
-                <img src="/images/actividades/surf.webp" width="328" height="217" alt="Imagen de Surf" loading="lazy">
+                <img src="/images/actividades/surf.webp" alt="Imagen de Surf" width="328" height="217" loading="lazy">
                     <h3>Surf</h3>
                         <p>Fernando de Noronha es, sin duda, uno de los mejores lugares de Brasil para la práctica del surf, y
                     sus olas tubulares y cristalinas atraen a los surfistas.</p>
                             <a href="#">Ampliar</a>
             </div>
         </section>
-    </main>
     <div class="text-container">
         <h2>Un lugar imperdible</h2>
             <p>Es considerado uno de los mejores puntos de buceo de Brasil, por lo que muchos ecoturistas viajan al
@@ -67,7 +70,7 @@
             buscan centros nocturnos ni grandes hoteles, sino que están dispuestos a tener un poco de incomodidades
             con tal de disfrutar de la naturaleza única del archipiélago.</p>
     </div>
-    <div class="quote-container">
+    <div class="quote-container full-width">
         <h3>“Viaje a Fernando de Noronha en tres ocasiones hace unos años. Toda la isla es un paraíso , un lugar
             mágico y en concreto Baia do Sancho es espectacular ; para mi sin dudarlo es una de las mejores playas
             del mundo”</h3>
@@ -147,15 +150,18 @@
         </div>
     </div>
     </section>
-    <footer class="footer-container">
-        <div class="socials">
-            <ul>
+    </main>  
+    <footer class="content-grid">
+        <div class="footer-container full-width content-grid">
+        <div class="footer-content">
+            <ul class="socials">
                 <li><a class="facebook" href="https://www.facebook.com/ConciergeNoronha/" target="_blank"><img src="/images/social/facebook.svg" alt="logo de facebook"></a></li>
                 <li><a class="instagram" href="https://www.instagram.com/noronha_oficial/" target="_blank"><img src="/images/social/instagram.svg" alt="logo de instagram" loading="lazy"></a></li>
                 <li><a class="twitter" href="https://twitter.com/noronhape" target="_blank"><img src="/images/social/twitter.svg" alt="logo de twitter" loading="lazy"></a></li>
             </ul>
-        </div>
         <p class="footer-text">Todos los derechos reservados © Noronha</p>
+    </div>
+</div>
     </footer>
 </body>
 
