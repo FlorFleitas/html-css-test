@@ -451,6 +451,7 @@ body {
     .quote-container h3 {
         width: 222px;
     }
+
     .places-card .text {
         padding: 0;
 
@@ -656,6 +657,9 @@ body {
 
     .testimonial-card .author {
         margin-left: 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 
     .footer-content {
@@ -757,5 +761,9 @@ body {
         flex-direction: column;
     }
 
+    .testimonial-card .author {
+        margin-left: 275px;
+        width: 100%;
+    }
 
 }
