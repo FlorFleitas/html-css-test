@@ -774,9 +774,16 @@ body {
     }
 
     .cards-container {
-        width: min-content;
+        width: auto;
         transform: translateY(-80px);
         gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+    .card img {
+        max-width: 100%;
     }
 
     .testimonial-card {
