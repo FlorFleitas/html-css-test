@@ -489,6 +489,7 @@ body {
     .menu-icon {
         display: block;
         z-index: 1000;
+        transition: transform 0.3s ease;
     }
 
     .nav-links ul li {
