@@ -166,7 +166,7 @@ body {
     padding: 0;
 }
 
-.card h3 {
+.card h2 {
     font-family: var(--font-family-heading);
     color: var(--color-primary);
     font-size: 35px;
