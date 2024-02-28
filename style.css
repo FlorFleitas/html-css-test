@@ -144,7 +144,12 @@ img.full-width {
     background-repeat: no-repeat;
     height: 440px;
     grid-template-rows: 100px 100px;
-    padding-top: 20px;
+    padding-top: 70px;
+}
+
+.opening-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .opening h1 {
@@ -153,6 +158,7 @@ img.full-width {
     letter-spacing: 1px;
     font-size: var(--font-size-title);
     font-weight: 100;
+    line-height: 56px;
 }
 
 .opening p {
@@ -171,19 +177,18 @@ img.full-width {
     justify-content: center;
     background-color: #fff;
     border-radius: 20px;
-    padding: 25px;
+    padding: 24px 24px 0 24px;
 }
 
 .card img {
-    max-width: 328px;
     border-radius: 10px;
     box-shadow: 0 10px 20px -9px rgba(78, 119, 119, 1);
 }
 
 .card {
-    width: 326px;
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
-    padding: 0;
 }
 
 .card h2 {
@@ -198,7 +203,7 @@ img.full-width {
     font-family: var(--font-family-text);
     color: var(--color-secondary);
     margin-top: 0;
-    line-height: 22px;
+    line-height: 22.4px;
     padding-bottom: 20px;
 }
 
@@ -211,6 +216,7 @@ img.full-width {
     font-family: var(--font-family-text);
     padding: 7px 15px;
     border-radius: 7px;
+    max-width: 91px;
     box-shadow: 0 10px 20px -9px rgba(78, 119, 119, 1);
 }
 
@@ -281,21 +287,27 @@ img.full-width {
     font-weight: 100;
 }
 
+
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
 .places-card1 {
     display: flex;
+    flex-direction: row;
     width: 100%;
 }
 
 .places-card1 img {
-    width: 589px;
     border-radius: 10px;
     box-shadow: 0 10px 20px -9px rgba(78, 119, 119, 1);
-    flex: 1;
 }
 
 .places-card1 .text {
+    display: flex;
+    flex-direction: column;
     padding: 50px 20px;
-    width: 50%;
 }
 
 .places-card1 h3,
@@ -303,8 +315,6 @@ img.full-width {
     font-family: var(--font-family-heading);
     color: var(--color-primary);
     font-size: 35px;
-    margin: 34px 0 0 0;
-    font-weight: 400;
     line-height: 30px;
 }
 
@@ -333,6 +343,7 @@ img.full-width {
 
 .places-card {
     display: flex;
+    flex-direction: row;
     width: 50%;
     align-items: center;
 }
@@ -513,7 +524,7 @@ img.full-width {
     .nav-links ul li {
         padding: 30px;
         border-bottom: 1px solid #fff;
-        width: 195px;
+        width: 260px;
     }
 
     .nav-links {
@@ -562,6 +573,8 @@ img.full-width {
 
     .card img {
         margin-top: 20px;
+        width: 100%;
+        height: auto;
     }
 
     .text-container {
@@ -616,7 +629,7 @@ img.full-width {
 
 
     .places-card1 .text {
-        padding: 0;
+        padding: 24px;
         width: auto;
     }
 
@@ -730,13 +743,8 @@ img.full-width {
     }
 
     .cards-container {
-        width: auto;
         transform: translateY(-80px);
         gap: 20px;
-    }
-
-    .card {
-        width: 100%;
     }
 
     .card img {
@@ -796,14 +804,6 @@ img.full-width {
         width: auto;
         transform: translateY(-80px);
         gap: 20px;
-    }
-
-    .card {
-        width: 100%;
-    }
-
-    .card img {
-        max-width: 100%;
     }
 
     .testimonial-card {
