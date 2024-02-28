@@ -4,7 +4,7 @@
 .content-grid {
     --padding-inline: 1rem;
     --content-max-width: 1024px;
-    --breakout-max-width: 1200px;
+    --breakout-max-width: 1300px;
 
     --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
 
@@ -157,7 +157,7 @@ body {
 .card img {
     max-width: 326px;
     border-radius: 10px;
-    box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
+    box-shadow: 0 10px 20px -9px rgba(78, 119, 119, 1);
 }
 
 .card {
@@ -190,7 +190,7 @@ body {
     font-family: var(--font-family-text);
     padding: 7px 15px;
     border-radius: 7px;
-    box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
+    box-shadow: 0 10px 20px -9px rgba(78, 119, 119, 1);
 }
 
 /* Estilos para el texto y la frase */
@@ -267,7 +267,7 @@ body {
 .places-card1 img {
     width: 589px;
     border-radius: 10px;
-    box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
+    box-shadow: 0 10px 20px -9px rgba(78, 119, 119, 1);
     flex: 1;
 }
 
@@ -303,7 +303,7 @@ body {
 
 .places-card img {
     border-radius: 10px;
-    box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
+    box-shadow: 0 10px 20px -9px rgba(78, 119, 119, 1);
     margin: 40px 0 0 0;
     width: 241px;
 
@@ -356,7 +356,7 @@ body {
     color: var(--color-secondary);
     border-radius: 10px;
     padding: 17px;
-    box-shadow: 0 8px 11px rgba(78, 119, 119, 0.5);
+    box-shadow: 0 10px 20px -9px rgba(78, 119, 119, 1);
 }
 
 .testimonial-card .text {
@@ -729,8 +729,8 @@ body {
 
 }
 
-/* Estilos para la mobile view hasta 1420w*/
-@media (min-width:1260px) and (max-width:1920px) {
+/* Estilos para la mobile view hasta 1920w*/
+@media (min-width:1260px) and (max-width:2920px) {
     .opening {
         background-position: initial;
         display: flex;
