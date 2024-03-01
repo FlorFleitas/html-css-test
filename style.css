@@ -576,7 +576,7 @@ img.full-width {
         width: 100%;
     }
 
-    .places-card .text {
+    .places-card:not(:last-child) .text {
         padding: 50px 20px;
         width: auto;
     }
